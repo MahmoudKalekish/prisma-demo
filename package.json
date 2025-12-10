@@ -1,0 +1,33 @@
+{
+  "name": "onramp-demo-prisma",
+  "version": "1.0.0",
+  "description": "This project is for trying out the [Prisma ORM](https://www.prisma.io/) with a PostgreSQL database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisshaddad/onramp-demo-prisma.git"
+  },
+  "keywords": [],
+  "author": "Chris Haddad",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/chrisshaddad/onramp-demo-prisma/issues"
+  },
+  "homepage": "https://github.com/chrisshaddad/onramp-demo-prisma#readme",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "@types/node": "^25.0.0",
+    "prisma": "^7.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.1.0",
+    "@prisma/client": "^7.1.0",
+    "dotenv": "^17.2.3"
+  }
+}
