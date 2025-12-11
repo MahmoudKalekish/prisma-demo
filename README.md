@@ -1,10 +1,10 @@
-### Prisma Demo
+## Prisma Demo
 
 This project is for trying out the [Prisma ORM](https://www.prisma.io/) with a PostgreSQL database.
 
 Please note this was created on a windows PC, while running on WSL2. Keep that in mind if you run into any issues.
 
-#### Prerequisites
+### Prerequisites
 
 - [Docker](https://docs.docker.com/engine/install/) - for running a local PostgreSQL database
 - [NodeJS](https://nodejs.org/en/download)
@@ -12,7 +12,7 @@ Please note this was created on a windows PC, while running on WSL2. Keep that i
   - Either install NodeJS if you don't have it already or switch to any v24+ version using any tool version management utility like `nvm`, `mise`, `asdf`...
 - **Optional:** A DB GUI tool like pgAdmin or DBeaver, as it will help browse your database visually - or you can also use the Prisma Studio
 
-#### Getting up and running
+### Getting up and running
 
 First, start a local PostgreSQL database using Docker:
 
@@ -37,6 +37,12 @@ Then, install the dependencies:
 npm install
 ```
 
+After, run the DB migrations for the first time:
+
+```bash
+npx prisma migrate dev
+```
+
 Now, you can generate your Prisma types:
 
 ```bash
@@ -49,7 +55,7 @@ Finally, run the attached `seed.ts` script to make sure everything is working fi
 npx tsx seed.ts
 ```
 
-#### Commands you might find useful
+### Commands you might find useful
 
 Create a migration and update the database schema:
 
@@ -69,7 +75,7 @@ Made a mistake in one of your migrations? No problem, delete the migration folde
 npx prisma migrate reset
 ```
 
-#### What you need to do
+### What you need to do
 
 1. Add a Publisher model, a many-to-one relationship between Publisher and Book.
 2. Add a Genre model, a many-to-many relationship between Genre and Book.
@@ -78,3 +84,5 @@ npx prisma migrate reset
 **Bonus Points:** Create a review system where users can leave reviews for books, including a rating and comment.
 
 **Extra Bonus Points** Create a DB `VIEW` for popular books books with an average rating above 4. _Hint:_ you can make use of `npx prisma migrate dev --create-only`
+
+**NOTE:** Make sure to add seeding using [faker.js](https://fakerjs.dev/) for any new models you create.
